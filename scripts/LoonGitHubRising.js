@@ -10,17 +10,18 @@
  * generic then script("https://raw.githubusercontent.com/GavinDong3600/loonx/main/scripts/LoonGitHubRising.js") with tag="GitHub新星项目", timeout=30
  * cron "35 12 * * *" then script("https://raw.githubusercontent.com/GavinDong3600/loonx/main/scripts/LoonGitHubRising.js") with tag="GitHub新星·定时", timeout=30, enable=false
  *
- * Compact iOS notice: Top 3, short project names, single-clause summaries.
+ * Expandable iOS notice: Top 10, short project names, single-clause summaries.
  * Display only; no openUrl, no API token, no local state or dedup.
  */
 (function () {
   "use strict";
 
   var days = 7;
+  var maxItems = 10;
   var since = new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
   var query = "created:>=" + since + " stars:>=5 fork:false";
   var url = "https://api.github.com/search/repositories?q=" +
-    encodeURIComponent(query) + "&sort=stars&order=desc&per_page=3";
+    encodeURIComponent(query) + "&sort=stars&order=desc&per_page=" + maxItems;;
   var completed = false;
 
   function clean(value, max) {
@@ -85,7 +86,7 @@
     var fullName = clean(repo.full_name, 100);
     var name = fullName.length <= 24 ? fullName : clean(repo.name || fullName.split("/")[1], 32);
     var lang = clean(repo.language || "其他", 14);
-    var marker = ["①", "②", "③"][index] || (index + 1) + ".";
+    var marker = (index + 1 < 10 ? "0" : "") + (index + 1) + ".";
     return marker + " " + shortText(name, 28) + "  ★" + stars(repo.stargazers_count) + " · " + lang +
       "\n   " + summary(repo.description);
   }
@@ -98,7 +99,7 @@
       headers: {
         Accept: "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
-        "User-Agent": "LoonGitHubRising/1.1"
+        "User-Agent": "LoonGitHubRising/1.2"
       }
     }, function (error, response, body) {
       if (error) return notify("网络错误", clean(error, 150));
@@ -116,9 +117,9 @@
       if (!data || !Array.isArray(data.items)) {
         return notify("数据错误", "GitHub API 没有返回项目列表");
       }
-      var lines = data.items.slice(0, 3).map(format).filter(Boolean);
+      var lines = data.items.slice(0, maxItems).map(format).filter(Boolean);
       if (!lines.length) return notify("暂无结果", "本周没有匹配的公开项目。");
-      notify("近 7 天创建 · 总 Star Top " + lines.length, lines.join("\n"));
+      notify("近 7 天创建 · 累计 Star Top " + lines.length, lines.join("\n\n"));
     });
   } catch (e) {
     notify("运行异常", clean(e, 160));
