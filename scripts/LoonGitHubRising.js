@@ -10,7 +10,8 @@
  * generic then script("https://raw.githubusercontent.com/GavinDong3600/loonx/main/scripts/LoonGitHubRising.js") with tag="GitHub新星项目", timeout=30
  * cron "35 12 * * *" then script("https://raw.githubusercontent.com/GavinDong3600/loonx/main/scripts/LoonGitHubRising.js") with tag="GitHub新星·定时", timeout=30, enable=false
  *
- * Display only; no openUrl, no API token, no local state.
+ * Compact iOS notice: Top 3, short project names, single-clause summaries.
+ * Display only; no openUrl, no API token, no local state or dedup.
  */
 (function () {
   "use strict";
@@ -19,7 +20,7 @@
   var since = new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
   var query = "created:>=" + since + " stars:>=5 fork:false";
   var url = "https://api.github.com/search/repositories?q=" +
-    encodeURIComponent(query) + "&sort=stars&order=desc&per_page=5";
+    encodeURIComponent(query) + "&sort=stars&order=desc&per_page=3";
   var completed = false;
 
   function clean(value, max) {
@@ -36,14 +37,57 @@
     }
     $done();
   }
+  // Truncate by approximate on-screen width (CJK chars count as two columns).
+  function shortText(value, maxWidth) {
+    var result = "";
+    var width = 0;
+    var i = 0;
+    for (; i < value.length; i++) {
+      var ch = value.charAt(i);
+      var step = /[^\x00-\xff]/.test(ch) ? 2 : 1;
+      if (width + step > maxWidth) break;
+      result += ch;
+      width += step;
+    }
+    if (i < value.length) {
+      if (/[a-z0-9]$/i.test(result) && /[a-z0-9]/i.test(value.charAt(i))) {
+        var space = result.lastIndexOf(" ");
+        if (space >= Math.floor(result.length / 2)) result = result.slice(0, space);
+      }
+      result = result.replace(/[\s,，.。:：;；-]+$/g, "") + "…";
+    }
+    return result;
+  }
+
+  function summary(value) {
+    var desc = clean(value, 240)
+      .replace(/https?:\/\/\S+/g, "")
+      .replace(/\s+/g, " ").trim();
+    if (!desc) return "暂无简介";
+    // Prefer one self-contained Chinese clause over duplicated bilingual text.
+    if (/[\u3400-\u9fff]/.test(desc)) {
+      var clause = desc.split(/[，,。！？!?；;：:]/)[0].trim();
+      var hanCount = (clause.match(/[\u3400-\u9fff]/g) || []).length;
+      if (hanCount >= 7 && clause.length <= 45) desc = clause;
+    }
+    return shortText(desc, 44);
+  }
+
+  function stars(value) {
+    var n = Number(value) || 0;
+    if (n >= 1000000) return (n / 1000000).toFixed(1).replace(/\.0$/, "") + "m";
+    if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, "") + "k";
+    return String(n);
+  }
+
   function format(repo, index) {
-    var name = clean(repo.full_name, 75);
-    if (!/^[a-z0-9_.-]+\/[a-z0-9_.-]+$/i.test(name)) return "";
-    var stars = Number(repo.stargazers_count) || 0;
-    var lang = clean(repo.language || "Other", 18);
-    var description = clean(repo.description || "", 100);
-    return (index + 1) + ". " + name + " ★" + stars.toLocaleString("en-US") +
-      " · " + lang + (description ? "\n   " + description : "");
+    if (!repo || !/^[a-z0-9_.-]+\/[a-z0-9_.-]+$/i.test(String(repo.full_name || ""))) return "";
+    var fullName = clean(repo.full_name, 100);
+    var name = fullName.length <= 24 ? fullName : clean(repo.name || fullName.split("/")[1], 32);
+    var lang = clean(repo.language || "其他", 14);
+    var marker = ["①", "②", "③"][index] || (index + 1) + ".";
+    return marker + " " + shortText(name, 28) + "  ★" + stars(repo.stargazers_count) + " · " + lang +
+      "\n   " + summary(repo.description);
   }
 
   try {
@@ -54,7 +98,7 @@
       headers: {
         Accept: "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
-        "User-Agent": "LoonGitHubRising/1.0"
+        "User-Agent": "LoonGitHubRising/1.1"
       }
     }, function (error, response, body) {
       if (error) return notify("网络错误", clean(error, 150));
@@ -72,10 +116,9 @@
       if (!data || !Array.isArray(data.items)) {
         return notify("数据错误", "GitHub API 没有返回项目列表");
       }
-      var lines = data.items.slice(0, 5).map(format).filter(Boolean);
+      var lines = data.items.slice(0, 3).map(format).filter(Boolean);
       if (!lines.length) return notify("暂无结果", "本周没有匹配的公开项目。");
-      var title = "近 7 天创建 · 按累计 Star 排序";
-      notify(title, lines.join("\n\n") + "\n（不是 GitHub 官方 Trending 榜）");
+      notify("近 7 天创建 · 总 Star Top " + lines.length, lines.join("\n"));
     });
   } catch (e) {
     notify("运行异常", clean(e, 160));
