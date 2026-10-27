@@ -1,7 +1,7 @@
 /*
  * LoonDaily60s.js — 每天 60 秒读懂世界（Loon 原生版）
  *
- * 功能：纯 iOS 通知（展开看新闻图）、手动执行、日期校验、重复推送保护、图片失败转文字。
+ * 功能：纯 iOS 通知（展开看新闻图）、手动执行、日期校验、允许重复通知、图片失败转文字。
  * 通知不配置 openUrl：不会跳转 Safari 或外部新闻网页。
  * 数据来源（非新闻真实性背书）：
  *   https://github.com/vikiboss/60s-static-host (MIT)
@@ -23,7 +23,6 @@
 
   var API_STATIC = "https://60s-static.viki.moe/60s/";
   var API_FALLBACK = "https://60s.viki.moe/v2/60s";
-  var STORE_KEY = "loonx.daily60s.lastNotifiedDate.v1";
   var manual = typeof $argument === "string" && $argument.toLowerCase().indexOf("manual") !== -1;
   var beijingToday = new Date(Date.now() + 8 * 3600000).toISOString().slice(0, 10);
   var finished = false;
@@ -105,8 +104,7 @@
     var attach = mediaUrl ? { mediaUrl: mediaUrl } : undefined;
     try {
       $notification.post("每天60秒读懂世界", subtitle, content, attach);
-      // 不依赖脚本 Tag：Generic 与 Cron 共用去重键。
-      $persistentStore.write(date, STORE_KEY);
+      // 不记录每日执行状态：手动测试与 Cron 均可重复推送。
       log("已提交通知：" + date + "，图片：" + (mediaUrl ? "是" : "否"));
     } catch (e) {
       log("通知失败：" + String(e));
@@ -120,13 +118,6 @@
       log("数据尚未更新：今天=" + beijingToday + "，接口=" + date + "；定时任务不推送过期日报");
       return done();
     }
-    // 测试阶段：临时停用“当日已推送则跳过”的判断，允许重复触发通知。
-    // 验收后取消以下注释，恢复每日仅推送一次。
-    // if (!manual && $persistentStore.read(STORE_KEY) === date) {
-    //   log("当日已推送，跳过：" + date);
-    //   return done();
-    // }
-
     var imagePrimary = "https://60s-static.viki.moe/images/" + date + ".png";
     var imageBackup = "https://cdn.jsdelivr.net/gh/vikiboss/60s-static-host@main/static/images/" + date + ".png";
     checkImage(imagePrimary, function (ok) {
