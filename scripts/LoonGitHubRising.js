@@ -1,8 +1,8 @@
 /*
- * LoonGitHubRising.js v2.0 - GitHub 新星图片日报
+ * LoonGitHubRising.js v2.1 - 单张 Top 10 GitHub 新星图片日报
  * 结合每日60秒图片海报 + LoonSetu (Pixiv) 的 mediaUrl 通知机制。
- * GitHub Actions 预生成同一榜单的 2 张图片和 latest.json（每张 Top 5）。
- * 图片缺失/过期时通过 GitHub Search 实时查询，并分为四条短文字通知。
+ * GitHub Actions 生成单张 Top 10 精简海报和相同榜单的 latest.json。
+ * 图片缺失时使用清单中的 10 个项目分四条通知；清单过期时回退 GitHub Search。
  *
  * 原 Loon 配置 URL 保持不变，无需 API Token，不去重，无 openUrl。
  * generic then script("https://raw.githubusercontent.com/GavinDong3600/loonx/main/scripts/LoonGitHubRising.js") with tag="GitHub新星项目", timeout=30
@@ -107,7 +107,7 @@
       if (!data || !Array.isArray(data.items)) return fail("API 榜单数据无效");
       splitText(data.items.filter(valid).slice(0, 10), reason);
     }, { Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28",
-         "User-Agent": "LoonGitHubRising/2.0" });
+         "User-Agent": "LoonGitHubRising/2.1" });
   }
   function checkImage(url, callback) {
     try {
@@ -121,34 +121,21 @@
       callback(false);
     }
   }
-  function preview(items, offset) {
+  function preview(items) {
     var lines = [];
-    for (var i = offset; i < offset + 2 && i < items.length; i++) {
+    for (var i = 0; i < 2 && i < items.length; i++) {
       lines.push((i + 1) + ". " + safe(items[i].name, 30) + " ★" + stars(items[i].stars));
     }
-    return lines.join("\n") + "\n展开通知查看完整五项的图片海报";
+    return lines.join("\n") + "\n展开通知查看完整 Top 10 图片海报";
   }
   function publish(data) {
-    var urls = [ROOT + today + "-part1.png", ROOT + today + "-part2.png"];
-    var checks = [false, false], received = 0;
-    function checked(index, ok) {
+    var posterUrl = ROOT + today + ".png";
+    checkImage(posterUrl, function (ok) {
       if (finished) return;
-      checks[index] = ok;
-      if (++received !== 2) return;
-      for (var part = 0; part < 2; part++) {
-        var first = part * 5, subtitle = today + " · Top " + (first + 1) + "–" + (first + 5);
-        if (checks[part]) {
-          post(subtitle, preview(data.items, first), urls[part]);
-        } else {
-          log("海报 " + (part + 1) + " 不可用，拆为两条文字通知");
-          textPart(data.items, first, first + 3, 1, 2);
-          textPart(data.items, first + 3, first + 5, 2, 2);
-        }
-      }
+      if (!ok) return splitText(data.items, "当天海报图片不可用");
+      post(today + " · 近7天新建 · Top 10", preview(data.items), posterUrl);
       done();
-    }
-    checkImage(urls[0], function (ok) { checked(0, ok); });
-    checkImage(urls[1], function (ok) { checked(1, ok); });
+    });
   }
   setTimeout(function () {
     if (!finished) fail("请求超过 27 秒，请查看 Loon 网络日志");
@@ -157,9 +144,8 @@
     if (error) return liveFallback(error);
     if (!data || data.date !== today || !Array.isArray(data.items) ||
         data.items.length !== 10 || !data.items.every(valid) ||
-        !Array.isArray(data.poster_urls) || data.poster_urls.length !== 2 ||
-        data.poster_urls[0] !== ROOT + today + "-part1.png" ||
-        data.poster_urls[1] !== ROOT + today + "-part2.png") {
+        data.version !== 2 ||
+        data.poster_url !== ROOT + today + ".png") {
       return liveFallback("无当日可用海报或清单校验失败");
     }
     publish(data);
