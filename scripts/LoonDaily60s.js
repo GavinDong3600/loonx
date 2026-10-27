@@ -120,10 +120,12 @@
       log("数据尚未更新：今天=" + beijingToday + "，接口=" + date + "；定时任务不推送过期日报");
       return done();
     }
-    if (!manual && $persistentStore.read(STORE_KEY) === date) {
-      log("当日已推送，跳过：" + date);
-      return done();
-    }
+    // 测试阶段：临时停用“当日已推送则跳过”的判断，允许重复触发通知。
+    // 验收后取消以下注释，恢复每日仅推送一次。
+    // if (!manual && $persistentStore.read(STORE_KEY) === date) {
+    //   log("当日已推送，跳过：" + date);
+    //   return done();
+    // }
 
     var imagePrimary = "https://60s-static.viki.moe/images/" + date + ".png";
     var imageBackup = "https://cdn.jsdelivr.net/gh/vikiboss/60s-static-host@main/static/images/" + date + ".png";
