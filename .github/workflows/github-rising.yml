@@ -1,0 +1,50 @@
+name: Build GitHub Rising posters
+
+on:
+  schedule:
+    # 10:15 China Standard Time (UTC+8); GitHub may delay schedules.
+    - cron: '15 2 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/github-rising.yml'
+      - 'tools/github_rising_poster.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: github-rising-poster
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install CJK fonts and Pillow
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-noto-cjk
+          python -m pip install 'Pillow>=10,<13'
+      - name: Generate posters and manifest from a single GitHub query
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python tools/github_rising_poster.py
+      - name: Publish static artifacts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/github-rising
+          if git diff --cached --quiet; then
+            echo 'No generated file changes'
+          else
+            git commit -m 'chore: refresh GitHub Rising posters'
+            git push
+          fi
