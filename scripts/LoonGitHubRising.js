@@ -10,9 +10,9 @@
  * generic then script("https://raw.githubusercontent.com/GavinDong3600/loonx/main/scripts/LoonGitHubRising.js") with tag="GitHub新星项目", timeout=30
  * cron "35 12 * * *" then script("https://raw.githubusercontent.com/GavinDong3600/loonx/main/scripts/LoonGitHubRising.js") with tag="GitHub新星·定时", timeout=30, enable=false
  *
- * Expandable iOS notice: Top 10, short project names, single-clause summaries.
+ * Daily digest presentation: Top 10, two-line entries, clean spacing.
+ * Text-only notification; unlike the 60s digest, no hosted poster is required.
  * Diagnostic safeguards: single notification, guarded callback, timeout fallback.
- * Notifications use a 5s display delay so manual tests can leave Loon foreground.
  * Display only; no openUrl, no API token, no local state or dedup.
  */
 (function () {
@@ -39,10 +39,9 @@
     completed = true;
     log("数据处理完成：" + subtitle + "，耗时 " + (Date.now() - requestStartedAt) + "ms");
     try {
-      // 延迟展示，以便从 Loon 前台手动运行后切回主屏幕。
-      // 这只是向 iOS 提交通知，不代表系统已实际展示。
-      $notification.post("GitHub · 新星项目", subtitle, String(text || ""), null, 5000);
-      log("已提交系统通知请求（5 秒延迟，实际展示取决于 iOS / Loon 设置）");
+      // 与每日 60 秒相同：直接向 iOS 系统发送原生通知，不额外延迟。
+      $notification.post("GitHub 新星日报", subtitle, String(text || ""));
+      log("已提交系统通知请求");
     } catch (e) {
       log("通知接口异常：" + String(e));
     }
@@ -94,11 +93,13 @@
   function format(repo, index) {
     if (!repo || !/^[a-z0-9_.-]+\/[a-z0-9_.-]+$/i.test(String(repo.full_name || ""))) return "";
     var fullName = clean(repo.full_name, 100);
-    var name = fullName.length <= 24 ? fullName : clean(repo.name || fullName.split("/")[1], 32);
-    var lang = clean(repo.language || "其他", 14);
-    var marker = (index + 1 < 10 ? "0" : "") + (index + 1) + ".";
-    return marker + " " + shortText(name, 28) + "  ★" + stars(repo.stargazers_count) + " · " + lang +
-      "\n   " + summary(repo.description);
+    var name = clean(repo.name || fullName.split("/")[1], 42);
+    var lang = clean(repo.language || "其他", 16);
+    var markers = ["①","②","③","④","⑤","⑥","⑦","⑧","⑨","⑩"];
+    var marker = markers[index] || String(index + 1) + ".";
+    var heading = marker + " " + shortText(name, 29) + "  ★" + stars(repo.stargazers_count);
+    var detail = shortText(lang + " · " + summary(repo.description), 52);
+    return heading + "\n   " + detail;
   }
 
   // HTTP 回调异常或丢失时，不让本次执行无声超时。
@@ -115,7 +116,7 @@
       headers: {
         Accept: "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
-        "User-Agent": "LoonGitHubRising/1.4"
+        "User-Agent": "LoonGitHubRising/1.5"
       }
     }, function (error, response, body) {
       if (completed) return;
@@ -137,7 +138,9 @@
       }
       var lines = data.items.slice(0, maxItems).map(format).filter(Boolean);
       if (!lines.length) return notify("暂无结果", "本周没有匹配的公开项目。");
-        notify("近 7 天创建 · 累计 Star Top " + lines.length, lines.join("\n\n"));
+        var now = new Date();
+      var dateLabel = (now.getMonth() + 1) + "月" + now.getDate() + "日";
+      notify(dateLabel + " · 近7天新建 · Top " + lines.length, lines.join("\n\n"));
       } catch (e) {
         notify("数据处理异常", clean(e && e.stack ? e.stack : e, 160));
       }
