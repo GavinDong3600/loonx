@@ -1,7 +1,8 @@
 /*
  * LoonDaily60s.js — 每天 60 秒读懂世界（Loon 原生版）
  *
- * 功能：每日新闻图片通知、手动执行、日期校验、重复推送保护、图片失败转文字。
+ * 功能：纯 iOS 通知（展开看新闻图）、手动执行、日期校验、重复推送保护、图片失败转文字。
+ * 通知不配置 openUrl：不会跳转 Safari 或外部新闻网页。
  * 数据来源（非新闻真实性背书）：
  *   https://github.com/vikiboss/60s-static-host (MIT)
  *   https://github.com/vikiboss/60s
@@ -22,7 +23,6 @@
 
   var API_STATIC = "https://60s-static.viki.moe/60s/";
   var API_FALLBACK = "https://60s.viki.moe/v2/60s";
-  var HOME = "https://60s-static.viki.moe/";
   var STORE_KEY = "loonx.daily60s.lastNotifiedDate.v1";
   var manual = typeof $argument === "string" && $argument.toLowerCase().indexOf("manual") !== -1;
   var beijingToday = new Date(Date.now() + 8 * 3600000).toISOString().slice(0, 10);
@@ -41,13 +41,9 @@
   function failure(message) {
     log(message);
     if (manual) {
-      $notification.post("每日60秒", "获取失败", message, { openUrl: HOME });
+      $notification.post("每日60秒", "获取失败", message);
     }
     done();
-  }
-
-  function validHttps(url) {
-    return typeof url === "string" && /^https:\/\/[^\s]+$/i.test(url);
   }
 
   function fetchJson(url, callback) {
@@ -104,11 +100,9 @@
     });
     var subtitle = date + " · " + data.news.length + " 条";
     if (!fresh) subtitle += " · 非今日";
-    var content = rows.join("\n") + (mediaUrl ? "\n展开通知查看完整图片" : "\n更多内容请打开日报网页");
-    var attach = {
-      openUrl: mediaUrl || (validHttps(data.link) ? data.link : HOME)
-    };
-    if (mediaUrl) attach.mediaUrl = mediaUrl;
+    var content = rows.join("\n") + (mediaUrl ? "\n长按或展开 iOS 通知查看完整新闻图片" : "\n图片不可用，以上为新闻文字摘要");
+    // 只添加 mediaUrl，绝不设置 openUrl，防止点击通知打开浏览器。
+    var attach = mediaUrl ? { mediaUrl: mediaUrl } : undefined;
     try {
       $notification.post("每天60秒读懂世界", subtitle, content, attach);
       // 不依赖脚本 Tag：Generic 与 Cron 共用去重键。
