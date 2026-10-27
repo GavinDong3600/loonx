@@ -12,6 +12,7 @@
  *
  * Expandable iOS notice: Top 10, short project names, single-clause summaries.
  * Diagnostic safeguards: single notification, guarded callback, timeout fallback.
+ * Notifications use a 5s display delay so manual tests can leave Loon foreground.
  * Display only; no openUrl, no API token, no local state or dedup.
  */
 (function () {
@@ -36,9 +37,12 @@
   function notify(subtitle, text) {
     if (completed) return;
     completed = true;
-    log("完成：" + subtitle + "，耗时 " + (Date.now() - requestStartedAt) + "ms");
+    log("数据处理完成：" + subtitle + "，耗时 " + (Date.now() - requestStartedAt) + "ms");
     try {
-      $notification.post("GitHub · 新星项目", subtitle, String(text || ""));
+      // 延迟展示，以便从 Loon 前台手动运行后切回主屏幕。
+      // 这只是向 iOS 提交通知，不代表系统已实际展示。
+      $notification.post("GitHub · 新星项目", subtitle, String(text || ""), null, 5000);
+      log("已提交系统通知请求（5 秒延迟，实际展示取决于 iOS / Loon 设置）");
     } catch (e) {
       log("通知接口异常：" + String(e));
     }
@@ -111,7 +115,7 @@
       headers: {
         Accept: "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
-        "User-Agent": "LoonGitHubRising/1.3"
+        "User-Agent": "LoonGitHubRising/1.4"
       }
     }, function (error, response, body) {
       if (completed) return;
