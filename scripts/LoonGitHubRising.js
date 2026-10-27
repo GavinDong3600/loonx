@@ -11,6 +11,7 @@
  * cron "35 12 * * *" then script("https://raw.githubusercontent.com/GavinDong3600/loonx/main/scripts/LoonGitHubRising.js") with tag="GitHub新星·定时", timeout=30, enable=false
  *
  * Expandable iOS notice: Top 10, short project names, single-clause summaries.
+ * Diagnostic safeguards: single notification, guarded callback, timeout fallback.
  * Display only; no openUrl, no API token, no local state or dedup.
  */
 (function () {
@@ -23,6 +24,10 @@
   var url = "https://api.github.com/search/repositories?q=" +
     encodeURIComponent(query) + "&sort=stars&order=desc&per_page=" + maxItems;
   var completed = false;
+  var requestStartedAt = Date.now();
+  function log(message) {
+    console.log("[LoonGitHubRising] " + message);
+  }
 
   function clean(value, max) {
     return String(value == null ? "" : value)
@@ -31,10 +36,11 @@
   function notify(subtitle, text) {
     if (completed) return;
     completed = true;
+    log("完成：" + subtitle + "，耗时 " + (Date.now() - requestStartedAt) + "ms");
     try {
-      $notification.post("GitHub · 新星项目", subtitle, text);
+      $notification.post("GitHub · 新星项目", subtitle, String(text || ""));
     } catch (e) {
-      console.log("[LoonGitHubRising] Notification error: " + String(e));
+      log("通知接口异常：" + String(e));
     }
     $done();
   }
@@ -91,7 +97,13 @@
       "\n   " + summary(repo.description);
   }
 
+  // HTTP 回调异常或丢失时，不让本次执行无声超时。
+  setTimeout(function () {
+    notify("获取超时", "GitHub API 18 秒内没有响应。请检查 Loon 日志及 api.github.com 的网络连接。");
+  }, 18000);
+
   try {
+    log("请求近 7 天项目（Top " + maxItems + "）");
     $httpClient.get({
       url: url,
       timeout: 10000,
@@ -99,10 +111,12 @@
       headers: {
         Accept: "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
-        "User-Agent": "LoonGitHubRising/1.2"
+        "User-Agent": "LoonGitHubRising/1.3"
       }
     }, function (error, response, body) {
-      if (error) return notify("网络错误", clean(error, 150));
+      if (completed) return;
+      try {
+        if (error) return notify("网络错误", clean(error, 150));
       var status = Number(response && (response.status || response.statusCode));
       if (status === 403 || status === 429) {
         return notify("GitHub API 限流", "请稍后再试；此脚本不使用账号令牌。HTTP " + status);
@@ -119,7 +133,10 @@
       }
       var lines = data.items.slice(0, maxItems).map(format).filter(Boolean);
       if (!lines.length) return notify("暂无结果", "本周没有匹配的公开项目。");
-      notify("近 7 天创建 · 累计 Star Top " + lines.length, lines.join("\n\n"));
+        notify("近 7 天创建 · 累计 Star Top " + lines.length, lines.join("\n\n"));
+      } catch (e) {
+        notify("数据处理异常", clean(e && e.stack ? e.stack : e, 160));
+      }
     });
   } catch (e) {
     notify("运行异常", clean(e, 160));
