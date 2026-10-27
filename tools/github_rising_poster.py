@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate two PNG GitHub Rising posters and a matching latest.json for Loon."""
+"""Generate one compact Top 10 PNG and a matching latest.json for Loon."""
 import json
 import os
 import re
@@ -76,7 +76,7 @@ def fetch():
                     "sort": "stars", "order": "desc", "per_page": 10})
     headers = {"Accept": "application/vnd.github+json",
                "X-GitHub-Api-Version": "2022-11-28",
-               "User-Agent": "loonx-github-rising-poster/2.0"}
+               "User-Agent": "loonx-github-rising-poster/2.1"}
     if os.environ.get("GITHUB_TOKEN"):
         headers["Authorization"] = "Bearer " + os.environ["GITHUB_TOKEN"]
     with urlopen(Request("https://api.github.com/search/repositories?" + qs,
@@ -96,58 +96,75 @@ def fetch():
         raise RuntimeError("Expected ten repositories, got " + str(len(items)))
     return now, since, items
 
-def poster(items, date, part, filename):
-    w, h = 1080, 1440
+def poster(items, date, filename):
+    """Fit all ten repositories into a single notification-friendly 1080x1920 PNG."""
+    w, h = 1080, 1920
     img = Image.new("RGB", (w, h), BG)
     d = ImageDraw.Draw(img)
-    logo, title = font(28, True), font(64, True)
-    small, num, name = font(28), font(43, True), font(38, True)
-    count, lang, desc, footer = font(32, True), font(25, True), font(28), font(23)
-    d.rounded_rectangle((54, 45, 455, 104), 24, fill="#16374b")
-    d.text((78, 58), "GITHUB  /  RISING", font=logo, fill=ACCENT)
-    d.text((54, 134), "GitHub 新星日报", font=title, fill=WHITE)
-    d.text((58, 230), f"{date}    近 7 天新建 · 累计 Star", font=small, fill=SUBTLE)
-    d.rounded_rectangle((786, 218, 1028, 275), 23, fill="#233b59")
-    d.text((814, 226), f"TOP {part} / 2", font=small, fill=BLUE)
+    label, heading = font(28, True), font(65, True)
+    small, number = font(27), font(37, True)
+    name_face, stars_face = font(37, True), font(30, True)
+    meta_face, desc_face, foot_face = font(26, True), font(29), font(24)
+
+    d.rounded_rectangle((54, 48, 456, 106), 25, fill="#16374b")
+    d.text((79, 60), "GITHUB  /  RISING", font=label, fill=ACCENT)
+    d.text((54, 132), "GitHub 新星日报", font=heading, fill=WHITE)
+    d.text((58, 234), f"{date}  ·  近7天新建  ·  总 Star 排序", font=small, fill=SUBTLE)
+
+    # 10 cards, each 133px high, separated by 18px for good visual rhythm.
+    # The final card ends at 1819, leaving room for the footer.
     for idx, item in enumerate(items):
-        y = 330 + idx * 208
-        d.rounded_rectangle((48, y, 1032, y + 192), 26, fill=CARD)
-        d.text((75, y + 24), f"{(part-1)*5+idx+1:02d}", font=num, fill=ACCENT)
-        d.text((154, y + 28), cut(d, item["full_name"], name, 640), font=name, fill=WHITE)
+        y = 310 + idx * 151
+        d.rounded_rectangle((48, y, 1032, y + 133), 23, fill=CARD)
+        d.text((75, y + 27), f"{idx + 1:02d}", font=number, fill=ACCENT)
+
         stat = "★ " + stars(item["stars"])
-        d.text((1002 - d.textlength(stat, font=count), y + 35),
-               stat, font=count, fill="#ffd681")
-        d.text((156, y + 82), cut(d, item["language"], lang, 155), font=lang, fill=BLUE)
-        for j, line in enumerate(wrap(d, item["description"], desc, 805)):
-            d.text((156, y + 117 + j * 32), line, font=desc, fill=SUBTLE)
-    d.line((56, 1372, 1024, 1372), fill="#273950", width=2)
-    d.text((60, 1390), "基于 GitHub Search · 非 GitHub 官方 Trending 榜单",
-           font=footer, fill=SUBTLE)
+        stat_width = d.textlength(stat, font=stars_face)
+        star_x = 1000 - stat_width
+        d.text((star_x, y + 28), stat, font=stars_face, fill="#ffd681")
+        display_name = clean(item.get("name") or item["full_name"].split("/")[-1], 100)
+        d.text((154, y + 22), cut(d, display_name, name_face, star_x - 175),
+               font=name_face, fill=WHITE)
+
+        language = cut(d, clean(item.get("language") or "其他", 30), meta_face, 160)
+        d.text((156, y + 83), language, font=meta_face, fill=BLUE)
+        x = 156 + d.textlength(language, font=meta_face) + 20
+        d.text((x, y + 83), "·", font=meta_face, fill=SUBTLE)
+        desc_x = x + 28
+        description = clean(item.get("description") or "项目暂无简介", 230)
+        # One short line per item keeps all Top 10 visible in the poster.
+        d.text((desc_x, y + 81), cut(d, description, desc_face, 995 - desc_x),
+               font=desc_face, fill=SUBTLE)
+
+    d.line((58, 1856, 1022, 1856), fill="#273950", width=2)
+    d.text((61, 1873), "来源 GitHub Search · 非官方 Trending · 累计 Star 排名",
+           font=foot_face, fill=SUBTLE)
     img.save(filename, "PNG", optimize=True)
 
 def main():
     now, since, items = fetch()
     date = now.date().isoformat()
     OUTPUT.mkdir(parents=True, exist_ok=True)
-    urls = []
-    for part in (1, 2):
-        filename = f"{date}-part{part}.png"
-        poster(items[(part-1)*5:part*5], date, part, OUTPUT / filename)
-        urls.append(BASE + filename)
-    manifest = {"version": 1, "date": date, "since": since,
+    filename = f"{date}.png"
+    poster(items, date, OUTPUT / filename)
+    manifest = {"version": 2, "date": date, "since": since,
                 "generated_at": now.isoformat(timespec="seconds"),
                 "sort": "total_stars_of_repositories_created_last_7_days",
-                "items": items, "poster_urls": urls}
+                "items": items, "poster_url": BASE + filename}
     (OUTPUT / "latest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    # Remove legacy two-part posters. Keep dated single-image history for 14 days.
     for old in OUTPUT.glob("????-??-??-part?.png"):
+        old.unlink()
+    for old in OUTPUT.glob("????-??-??.png"):
         try:
             age = (now.date() - datetime.strptime(old.name[:10], "%Y-%m-%d").date()).days
             if age > 14:
                 old.unlink()
         except ValueError:
             continue
-    print(f"Generated {date}: 10 repositories, two PNGs and latest.json")
+    print(f"Generated {date}: 10 repositories, one 1080x1920 PNG and latest.json")
 
 if __name__ == "__main__":
     try:
