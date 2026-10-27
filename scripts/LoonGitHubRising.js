@@ -21,7 +21,7 @@
   var since = new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
   var query = "created:>=" + since + " stars:>=5 fork:false";
   var url = "https://api.github.com/search/repositories?q=" +
-    encodeURIComponent(query) + "&sort=stars&order=desc&per_page=" + maxItems;;
+    encodeURIComponent(query) + "&sort=stars&order=desc&per_page=" + maxItems;
   var completed = false;
 
   function clean(value, max) {
