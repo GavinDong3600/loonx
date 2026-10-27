@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "date": "2026-10-27",
+  "since": "2026-10-20",
+  "generated_at": "2026-10-27T23:46:23+08:00",
+  "sort": "total_stars_of_repositories_created_last_7_days",
+  "items": [
+    {
+      "full_name": "pengchujin/aerial-tv",
+      "name": "aerial-tv",
+      "language": "Kotlin",
+      "stars": 6639,
+      "description": "给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面，没有广告，开机自动接管",
+      "html_url": "https://github.com/pengchujin/aerial-tv"
+    },
+    {
+      "full_name": "JustAResearcher/gpu-unlock-ada",
+      "name": "gpu-unlock-ada",
+      "language": "C",
+      "stars": 4167,
+      "description": "GPU tensor unlock source for RTX 4090 and experimental RTX 4070 Ti SUPER; firmware generated locally",
+      "html_url": "https://github.com/JustAResearcher/gpu-unlock-ada"
+    },
+    {
+      "full_name": "rddmwmddr/android-ad-cleaner",
+      "name": "android-ad-cleaner",
+      "language": "Python",
+      "stars": 3046,
+      "description": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送",
+      "html_url": "https://github.com/rddmwmddr/android-ad-cleaner"
+    },
+    {
+      "full_name": "designfuchen/word-atlas",
+      "name": "word-atlas",
+      "language": "TypeScript",
+      "stars": 2362,
+      "description": "词光 · Word Atlas — Illustrated IELTS vocabulary with 7,298 words, UK/US audio and FSRS review. Open-source app + CC BY 4.0 dataset.",
+      "html_url": "https://github.com/designfuchen/word-atlas"
+    },
+    {
+      "full_name": "Jakeschincariol/day-trader-skill",
+      "name": "day-trader-skill",
+      "language": "Python",
+      "stars": 2225,
+      "description": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
+      "html_url": "https://github.com/Jakeschincariol/day-trader-skill"
+    },
+    {
+      "full_name": "wesbos/3d-model-anything",
+      "name": "3d-model-anything",
+      "language": "Swift",
+      "stars": 2169,
+      "description": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
+      "html_url": "https://github.com/wesbos/3d-model-anything"
+    },
+    {
+      "full_name": "xevrion/hatchzip",
+      "name": "hatchzip",
+      "language": "Rust",
+      "stars": 2122,
+      "description": "HatchZip is a free, open-source archive extractor for Windows, macOS and Linux that extracts ZIP, 7z, RAR, tar and split archives in place, so it needs free space for the extracted files only. Desktop app and CLI.",
+      "html_url": "https://github.com/xevrion/hatchzip"
+    },
+    {
+      "full_name": "ikow/php2shell-poc",
+      "name": "php2shell-poc",
+      "language": "Python",
+      "stars": 1862,
+      "description": "CVE-2026-109618/109619 — 5 RCE chains + detection rules (Suricata, Sigma, ModSecurity). PHP session.upload_progress pre-auth exploit research.",
+      "html_url": "https://github.com/ikow/php2shell-poc"
+    },
+    {
+      "full_name": "t3dotgg/tstack",
+      "name": "tstack",
+      "language": "Python",
+      "stars": 1856,
+      "description": "The agent skills I use every day. Works with Claude Code and Codex.",
+      "html_url": "https://github.com/t3dotgg/tstack"
+    },
+    {
+      "full_name": "unclebob/ub-mode",
+      "name": "ub-mode",
+      "language": "其他",
+      "stars": 1793,
+      "description": "项目暂无简介",
+      "html_url": "https://github.com/unclebob/ub-mode"
+    }
+  ],
+  "poster_urls": [
+    "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-10-27-part1.png",
+    "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-10-27-part2.png"
+  ]
+}
