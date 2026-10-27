@@ -46,5 +46,6 @@ jobs:
             echo 'No generated file changes'
           else
             git commit -m 'chore: refresh GitHub Rising posters'
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
