@@ -1,15 +1,23 @@
 {
   "version": 2,
-  "date": "2026-10-29",
-  "since": "2026-10-22",
-  "generated_at": "2026-10-29T16:27:15+08:00",
+  "date": "2026-10-30",
+  "since": "2026-10-23",
+  "generated_at": "2026-10-30T16:37:45+08:00",
   "sort": "total_stars_of_repositories_created_last_7_days",
   "items": [
+    {
+      "full_name": "unclebob/ub-mode",
+      "name": "ub-mode",
+      "language": "其他",
+      "stars": 5032,
+      "description": "项目暂无简介",
+      "html_url": "https://github.com/unclebob/ub-mode"
+    },
     {
       "full_name": "rddmwmddr/android-ad-cleaner",
       "name": "android-ad-cleaner",
       "language": "Python",
-      "stars": 4521,
+      "stars": 4891,
       "description": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送",
       "html_url": "https://github.com/rddmwmddr/android-ad-cleaner"
     },
@@ -17,31 +25,15 @@
       "full_name": "JustAResearcher/gpu-unlock-ada",
       "name": "gpu-unlock-ada",
       "language": "C",
-      "stars": 4455,
+      "stars": 4543,
       "description": "GPU tensor unlock source for RTX 4090 and experimental RTX 4070 Ti SUPER; firmware generated locally",
       "html_url": "https://github.com/JustAResearcher/gpu-unlock-ada"
-    },
-    {
-      "full_name": "unclebob/ub-mode",
-      "name": "ub-mode",
-      "language": "其他",
-      "stars": 4081,
-      "description": "项目暂无简介",
-      "html_url": "https://github.com/unclebob/ub-mode"
-    },
-    {
-      "full_name": "designfuchen/word-atlas",
-      "name": "word-atlas",
-      "language": "TypeScript",
-      "stars": 3149,
-      "description": "词光 · Word Atlas — Illustrated IELTS vocabulary with 7,298 words, UK/US audio and FSRS review. Open-source app + CC BY 4.0 dataset.",
-      "html_url": "https://github.com/designfuchen/word-atlas"
     },
     {
       "full_name": "interplains/Zero-Breach-Toolkit",
       "name": "Zero-Breach-Toolkit",
       "language": "Python",
-      "stars": 3015,
+      "stars": 3696,
       "description": "Free, open-source, offline checks for traces of known mercenary spyware. Works on Windows, macOS and Linux, Android phones and iPhone backups.",
       "html_url": "https://github.com/interplains/Zero-Breach-Toolkit"
     },
@@ -49,42 +41,50 @@
       "full_name": "anhao/ai-pose-gallery-zh",
       "name": "ai-pose-gallery-zh",
       "language": "HTML",
-      "stars": 2361,
+      "stars": 3578,
       "description": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊",
       "html_url": "https://github.com/anhao/ai-pose-gallery-zh"
+    },
+    {
+      "full_name": "designfuchen/word-atlas",
+      "name": "word-atlas",
+      "language": "TypeScript",
+      "stars": 3295,
+      "description": "词光 · Word Atlas — Illustrated IELTS vocabulary with 7,298 words, UK/US audio and FSRS review. Open-source app + CC BY 4.0 dataset.",
+      "html_url": "https://github.com/designfuchen/word-atlas"
     },
     {
       "full_name": "t3dotgg/tstack",
       "name": "tstack",
       "language": "Python",
-      "stars": 2302,
+      "stars": 2423,
       "description": "The agent skills I use every day. Works with Claude Code and Codex.",
       "html_url": "https://github.com/t3dotgg/tstack"
-    },
-    {
-      "full_name": "oosexgang/hakios-xnu-kernel",
-      "name": "hakios-xnu-kernel",
-      "language": "C",
-      "stars": 1923,
-      "description": "项目暂无简介",
-      "html_url": "https://github.com/oosexgang/hakios-xnu-kernel"
     },
     {
       "full_name": "enesozturk/dimensional-drawing",
       "name": "dimensional-drawing",
       "language": "HTML",
-      "stars": 1477,
+      "stars": 1583,
       "description": "Create Apple style dimensional drawings of UI components.",
       "html_url": "https://github.com/enesozturk/dimensional-drawing"
+    },
+    {
+      "full_name": "andyhuo520/digital-human-koubo",
+      "name": "digital-human-koubo",
+      "language": "TypeScript",
+      "stars": 1522,
+      "description": "AI digital-human talking-head videos from one photo: Renoise MCP generation + 5 editing styles + 48 creator-grade packaging components. Agent skill for Claude Code / Codex / OpenClaw / WorkBuddy …",
+      "html_url": "https://github.com/andyhuo520/digital-human-koubo"
     },
     {
       "full_name": "morganlinton/BeautifulRust",
       "name": "BeautifulRust",
       "language": "Python",
-      "stars": 1381,
+      "stars": 1433,
       "description": "Agent Skills that teach coding agents to write, review, and port idiomatic Rust, plus a tested clippy config. Works with Claude Code, Codex, Copilot, Cursor, and Gemini CLI.",
       "html_url": "https://github.com/morganlinton/BeautifulRust"
     }
   ],
-  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-10-29.png"
+  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-10-30.png"
 }
