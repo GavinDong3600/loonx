@@ -1,71 +1,39 @@
 {
   "version": 2,
-  "date": "2026-11-01",
-  "since": "2026-10-25",
-  "generated_at": "2026-11-01T17:13:41+08:00",
+  "date": "2026-11-02",
+  "since": "2026-10-26",
+  "generated_at": "2026-11-02T17:27:51+08:00",
   "sort": "total_stars_of_repositories_created_last_7_days",
   "items": [
     {
-      "full_name": "unclebob/ub-mode",
-      "name": "ub-mode",
-      "language": "其他",
-      "stars": 5980,
-      "description": "项目暂无简介",
-      "html_url": "https://github.com/unclebob/ub-mode"
+      "full_name": "deepseek-ai/dsh-superagent-prototype",
+      "name": "dsh-superagent-prototype",
+      "language": "TypeScript",
+      "stars": 10617,
+      "description": "Towards a More Autonomous Agent System",
+      "html_url": "https://github.com/deepseek-ai/dsh-superagent-prototype"
     },
     {
       "full_name": "anhao/ai-pose-gallery-zh",
       "name": "ai-pose-gallery-zh",
       "language": "TypeScript",
-      "stars": 4928,
+      "stars": 5351,
       "description": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊",
       "html_url": "https://github.com/anhao/ai-pose-gallery-zh"
-    },
-    {
-      "full_name": "deepseek-ai/dsh-superagent-prototype",
-      "name": "dsh-superagent-prototype",
-      "language": "TypeScript",
-      "stars": 4598,
-      "description": "Towards a More Autonomous Agent System",
-      "html_url": "https://github.com/deepseek-ai/dsh-superagent-prototype"
-    },
-    {
-      "full_name": "interplains/Zero-Breach-Toolkit",
-      "name": "Zero-Breach-Toolkit",
-      "language": "Python",
-      "stars": 4034,
-      "description": "Free, open-source, offline checks for traces of known mercenary spyware. Works on Windows, macOS and Linux, Android phones and iPhone backups.",
-      "html_url": "https://github.com/interplains/Zero-Breach-Toolkit"
-    },
-    {
-      "full_name": "ccch1mneyyy/dsh-Go",
-      "name": "dsh-Go",
-      "language": "Dart",
-      "stars": 3976,
-      "description": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑",
-      "html_url": "https://github.com/ccch1mneyyy/dsh-Go"
     },
     {
       "full_name": "heydamir/unslop",
       "name": "unslop",
       "language": "JavaScript",
-      "stars": 3976,
+      "stars": 5293,
       "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
       "html_url": "https://github.com/heydamir/unslop"
-    },
-    {
-      "full_name": "designfuchen/word-atlas",
-      "name": "word-atlas",
-      "language": "TypeScript",
-      "stars": 3617,
-      "description": "词光 · Word Atlas — Illustrated IELTS vocabulary with 7,298 words, UK/US audio and FSRS review. Open-source app + CC BY 4.0 dataset.",
-      "html_url": "https://github.com/designfuchen/word-atlas"
     },
     {
       "full_name": "wangzan101/Mika",
       "name": "Mika",
       "language": "Kotlin",
-      "stars": 3153,
+      "stars": 4651,
       "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
       "html_url": "https://github.com/wangzan101/Mika"
     },
@@ -73,7 +41,7 @@
       "full_name": "valentderah/totk-pc-recomp",
       "name": "totk-pc-recomp",
       "language": "C",
-      "stars": 2811,
+      "stars": 3460,
       "description": "Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows x86-64, with a Vulkan renderer. Game files not included.",
       "html_url": "https://github.com/valentderah/totk-pc-recomp"
     },
@@ -81,10 +49,42 @@
       "full_name": "patch-gg/pixelfx",
       "name": "pixelfx",
       "language": "JavaScript",
-      "stars": 1847,
+      "stars": 3091,
       "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
       "html_url": "https://github.com/patch-gg/pixelfx"
+    },
+    {
+      "full_name": "Djihads80/Eglantine",
+      "name": "Eglantine",
+      "language": "C++",
+      "stars": 2151,
+      "description": "VERY experimental Nintendo Switch 2 emulator",
+      "html_url": "https://github.com/Djihads80/Eglantine"
+    },
+    {
+      "full_name": "storytold/craft-anything",
+      "name": "craft-anything",
+      "language": "Rust",
+      "stars": 2024,
+      "description": "Craft Anything: understand how any software works, and craft your own.",
+      "html_url": "https://github.com/storytold/craft-anything"
+    },
+    {
+      "full_name": "paipiange/nvzhuang",
+      "name": "nvzhuang",
+      "language": "Go",
+      "stars": 2007,
+      "description": "1407 张 AI 女装参考图集与虚拟试穿网站，支持中英检索、OpenAI Images / Gemini / 豆包及自定义 Base URL、API Key、模型",
+      "html_url": "https://github.com/paipiange/nvzhuang"
+    },
+    {
+      "full_name": "haydenschmitty/floorplan",
+      "name": "floorplan",
+      "language": "JavaScript",
+      "stars": 1968,
+      "description": "See how your app actually fits together. An interactive, plain-English map of your codebase, drawn by Claude or Codex.",
+      "html_url": "https://github.com/haydenschmitty/floorplan"
     }
   ],
-  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-01.png"
+  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-02.png"
 }
