@@ -1,23 +1,31 @@
 {
   "version": 2,
-  "date": "2026-11-03",
-  "since": "2026-10-27",
-  "generated_at": "2026-11-03T17:31:17+08:00",
+  "date": "2026-11-04",
+  "since": "2026-10-28",
+  "generated_at": "2026-11-04T17:08:49+08:00",
   "sort": "total_stars_of_repositories_created_last_7_days",
   "items": [
     {
       "full_name": "deepseek-ai/dsh-superagent-prototype",
       "name": "dsh-superagent-prototype",
       "language": "TypeScript",
-      "stars": 15128,
+      "stars": 17902,
       "description": "Towards a More Autonomous Agent System",
       "html_url": "https://github.com/deepseek-ai/dsh-superagent-prototype"
+    },
+    {
+      "full_name": "storytold/craft-anything",
+      "name": "craft-anything",
+      "language": "Rust",
+      "stars": 9565,
+      "description": "Craft Anything: understand how any software works, and craft your own.",
+      "html_url": "https://github.com/storytold/craft-anything"
     },
     {
       "full_name": "heydamir/unslop",
       "name": "unslop",
       "language": "JavaScript",
-      "stars": 6745,
+      "stars": 7851,
       "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
       "html_url": "https://github.com/heydamir/unslop"
     },
@@ -25,31 +33,15 @@
       "full_name": "wangzan101/Mika",
       "name": "Mika",
       "language": "Kotlin",
-      "stars": 5777,
+      "stars": 6273,
       "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
       "html_url": "https://github.com/wangzan101/Mika"
-    },
-    {
-      "full_name": "anhao/ai-pose-gallery-zh",
-      "name": "ai-pose-gallery-zh",
-      "language": "TypeScript",
-      "stars": 5687,
-      "description": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊",
-      "html_url": "https://github.com/anhao/ai-pose-gallery-zh"
-    },
-    {
-      "full_name": "storytold/craft-anything",
-      "name": "craft-anything",
-      "language": "Rust",
-      "stars": 5651,
-      "description": "Craft Anything: understand how any software works, and craft your own.",
-      "html_url": "https://github.com/storytold/craft-anything"
     },
     {
       "full_name": "valentderah/totk-pc-recomp",
       "name": "totk-pc-recomp",
       "language": "C",
-      "stars": 4218,
+      "stars": 4643,
       "description": "Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows and Linux x86-64, with a Vulkan renderer. Game files not included.",
       "html_url": "https://github.com/valentderah/totk-pc-recomp"
     },
@@ -57,34 +49,42 @@
       "full_name": "patch-gg/pixelfx",
       "name": "pixelfx",
       "language": "JavaScript",
-      "stars": 3766,
+      "stars": 4383,
       "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
       "html_url": "https://github.com/patch-gg/pixelfx"
-    },
-    {
-      "full_name": "Djihads80/Eglantine",
-      "name": "Eglantine",
-      "language": "C++",
-      "stars": 2705,
-      "description": "VERY experimental Nintendo Switch 2 emulator",
-      "html_url": "https://github.com/Djihads80/Eglantine"
     },
     {
       "full_name": "BryceYuuu/RUN",
       "name": "RUN",
       "language": "Python",
-      "stars": 2366,
+      "stars": 3399,
       "description": "RUN · 润：海外移居手册（欧洲 36 国 · 110 条路线 · 主要移民地区）",
       "html_url": "https://github.com/BryceYuuu/RUN"
     },
     {
-      "full_name": "haydenschmitty/floorplan",
-      "name": "floorplan",
-      "language": "JavaScript",
-      "stars": 2343,
-      "description": "See how your app actually fits together. An interactive, plain-English map of your codebase, drawn by Claude or Codex.",
-      "html_url": "https://github.com/haydenschmitty/floorplan"
+      "full_name": "Djihads80/Eglantine",
+      "name": "Eglantine",
+      "language": "C++",
+      "stars": 3224,
+      "description": "VERY experimental Nintendo Switch 2 emulator",
+      "html_url": "https://github.com/Djihads80/Eglantine"
+    },
+    {
+      "full_name": "paipiange/nvzhuang",
+      "name": "nvzhuang",
+      "language": "Go",
+      "stars": 2159,
+      "description": "1407 张 AI 女装参考图集与虚拟试穿网站，支持中英检索、OpenAI Images / Gemini / 豆包及自定义 Base URL、API Key、模型",
+      "html_url": "https://github.com/paipiange/nvzhuang"
+    },
+    {
+      "full_name": "Verlintas/NOIR",
+      "name": "NOIR",
+      "language": "Kotlin",
+      "stars": 1849,
+      "description": "手机隐私审计：用 adb 扫出 Android 应用的权限、上报端点与数据流向，并给出可回滚的处置",
+      "html_url": "https://github.com/Verlintas/NOIR"
     }
   ],
-  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-03.png"
+  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-04.png"
 }
