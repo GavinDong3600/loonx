@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "date": "2026-11-04",
-  "since": "2026-10-28",
-  "generated_at": "2026-11-04T17:08:49+08:00",
+  "date": "2026-11-05",
+  "since": "2026-10-29",
+  "generated_at": "2026-11-05T17:28:40+08:00",
   "sort": "total_stars_of_repositories_created_last_7_days",
   "items": [
     {
       "full_name": "deepseek-ai/dsh-superagent-prototype",
       "name": "dsh-superagent-prototype",
       "language": "TypeScript",
-      "stars": 17902,
+      "stars": 19085,
       "description": "Towards a More Autonomous Agent System",
       "html_url": "https://github.com/deepseek-ai/dsh-superagent-prototype"
     },
@@ -17,7 +17,7 @@
       "full_name": "storytold/craft-anything",
       "name": "craft-anything",
       "language": "Rust",
-      "stars": 9565,
+      "stars": 13438,
       "description": "Craft Anything: understand how any software works, and craft your own.",
       "html_url": "https://github.com/storytold/craft-anything"
     },
@@ -25,7 +25,7 @@
       "full_name": "heydamir/unslop",
       "name": "unslop",
       "language": "JavaScript",
-      "stars": 7851,
+      "stars": 9027,
       "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
       "html_url": "https://github.com/heydamir/unslop"
     },
@@ -33,58 +33,58 @@
       "full_name": "wangzan101/Mika",
       "name": "Mika",
       "language": "Kotlin",
-      "stars": 6273,
+      "stars": 6881,
       "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
       "html_url": "https://github.com/wangzan101/Mika"
-    },
-    {
-      "full_name": "valentderah/totk-pc-recomp",
-      "name": "totk-pc-recomp",
-      "language": "C",
-      "stars": 4643,
-      "description": "Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows and Linux x86-64, with a Vulkan renderer. Game files not included.",
-      "html_url": "https://github.com/valentderah/totk-pc-recomp"
     },
     {
       "full_name": "patch-gg/pixelfx",
       "name": "pixelfx",
       "language": "JavaScript",
-      "stars": 4383,
+      "stars": 4987,
       "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
       "html_url": "https://github.com/patch-gg/pixelfx"
     },
     {
-      "full_name": "BryceYuuu/RUN",
-      "name": "RUN",
-      "language": "Python",
-      "stars": 3399,
-      "description": "RUN · 润：海外移居手册（欧洲 36 国 · 110 条路线 · 主要移民地区）",
-      "html_url": "https://github.com/BryceYuuu/RUN"
+      "full_name": "valentderah/totk-pc-recomp",
+      "name": "totk-pc-recomp",
+      "language": "C",
+      "stars": 4966,
+      "description": "Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows and Linux x86-64, with a Vulkan renderer. Game files not included.",
+      "html_url": "https://github.com/valentderah/totk-pc-recomp"
     },
     {
       "full_name": "Djihads80/Eglantine",
       "name": "Eglantine",
       "language": "C++",
-      "stars": 3224,
+      "stars": 3979,
       "description": "VERY experimental Nintendo Switch 2 emulator",
       "html_url": "https://github.com/Djihads80/Eglantine"
     },
     {
-      "full_name": "paipiange/nvzhuang",
-      "name": "nvzhuang",
-      "language": "Go",
-      "stars": 2159,
-      "description": "1407 张 AI 女装参考图集与虚拟试穿网站，支持中英检索、OpenAI Images / Gemini / 豆包及自定义 Base URL、API Key、模型",
-      "html_url": "https://github.com/paipiange/nvzhuang"
+      "full_name": "BryceYuuu/RUN",
+      "name": "RUN",
+      "language": "Python",
+      "stars": 3850,
+      "description": "RUN · 润：海外移居手册（欧洲 36 国 · 110 条路线 · 主要移民地区）",
+      "html_url": "https://github.com/BryceYuuu/RUN"
+    },
+    {
+      "full_name": "KKKKhazix/agent-autoloop",
+      "name": "agent-autoloop",
+      "language": "TypeScript",
+      "stars": 2959,
+      "description": "让你的命令行 Agent 在后台自己接活、自己跟进到底",
+      "html_url": "https://github.com/KKKKhazix/agent-autoloop"
     },
     {
       "full_name": "Verlintas/NOIR",
       "name": "NOIR",
       "language": "Kotlin",
-      "stars": 1849,
+      "stars": 2274,
       "description": "手机隐私审计：用 adb 扫出 Android 应用的权限、上报端点与数据流向，并给出可回滚的处置",
       "html_url": "https://github.com/Verlintas/NOIR"
     }
   ],
-  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-04.png"
+  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-05.png"
 }
