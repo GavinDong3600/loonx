@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "date": "2026-11-05",
-  "since": "2026-10-29",
-  "generated_at": "2026-11-05T17:28:40+08:00",
+  "date": "2026-11-06",
+  "since": "2026-10-30",
+  "generated_at": "2026-11-06T17:21:52+08:00",
   "sort": "total_stars_of_repositories_created_last_7_days",
   "items": [
     {
       "full_name": "deepseek-ai/dsh-superagent-prototype",
       "name": "dsh-superagent-prototype",
       "language": "TypeScript",
-      "stars": 19085,
+      "stars": 19916,
       "description": "Towards a More Autonomous Agent System",
       "html_url": "https://github.com/deepseek-ai/dsh-superagent-prototype"
     },
@@ -17,74 +17,74 @@
       "full_name": "storytold/craft-anything",
       "name": "craft-anything",
       "language": "Rust",
-      "stars": 13438,
+      "stars": 16262,
       "description": "Craft Anything: understand how any software works, and craft your own.",
       "html_url": "https://github.com/storytold/craft-anything"
-    },
-    {
-      "full_name": "heydamir/unslop",
-      "name": "unslop",
-      "language": "JavaScript",
-      "stars": 9027,
-      "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
-      "html_url": "https://github.com/heydamir/unslop"
-    },
-    {
-      "full_name": "wangzan101/Mika",
-      "name": "Mika",
-      "language": "Kotlin",
-      "stars": 6881,
-      "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
-      "html_url": "https://github.com/wangzan101/Mika"
     },
     {
       "full_name": "patch-gg/pixelfx",
       "name": "pixelfx",
       "language": "JavaScript",
-      "stars": 4987,
+      "stars": 5440,
       "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
       "html_url": "https://github.com/patch-gg/pixelfx"
-    },
-    {
-      "full_name": "valentderah/totk-pc-recomp",
-      "name": "totk-pc-recomp",
-      "language": "C",
-      "stars": 4966,
-      "description": "Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows and Linux x86-64, with a Vulkan renderer. Game files not included.",
-      "html_url": "https://github.com/valentderah/totk-pc-recomp"
-    },
-    {
-      "full_name": "Djihads80/Eglantine",
-      "name": "Eglantine",
-      "language": "C++",
-      "stars": 3979,
-      "description": "VERY experimental Nintendo Switch 2 emulator",
-      "html_url": "https://github.com/Djihads80/Eglantine"
-    },
-    {
-      "full_name": "BryceYuuu/RUN",
-      "name": "RUN",
-      "language": "Python",
-      "stars": 3850,
-      "description": "RUN · 润：海外移居手册（欧洲 36 国 · 110 条路线 · 主要移民地区）",
-      "html_url": "https://github.com/BryceYuuu/RUN"
     },
     {
       "full_name": "KKKKhazix/agent-autoloop",
       "name": "agent-autoloop",
       "language": "TypeScript",
-      "stars": 2959,
+      "stars": 3446,
       "description": "让你的命令行 Agent 在后台自己接活、自己跟进到底",
       "html_url": "https://github.com/KKKKhazix/agent-autoloop"
+    },
+    {
+      "full_name": "zortos293/Lichii",
+      "name": "Lichii",
+      "language": "C++",
+      "stars": 2801,
+      "description": "VERY experimental Nintendo Switch 2 emulator",
+      "html_url": "https://github.com/zortos293/Lichii"
+    },
+    {
+      "full_name": "worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
+      "name": "Google_AI_Pro_2Year_ZeroCost_Auto",
+      "language": "Python",
+      "stars": 2672,
+      "description": "Google_AI_Pro_2Year_ZeroCost_Auto",
+      "html_url": "https://github.com/worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto"
     },
     {
       "full_name": "Verlintas/NOIR",
       "name": "NOIR",
       "language": "Kotlin",
-      "stars": 2274,
+      "stars": 2658,
       "description": "手机隐私审计：用 adb 扫出 Android 应用的权限、上报端点与数据流向，并给出可回滚的处置",
       "html_url": "https://github.com/Verlintas/NOIR"
+    },
+    {
+      "full_name": "elvarofficial/teardown",
+      "name": "teardown",
+      "language": "JavaScript",
+      "stars": 2302,
+      "description": "A Claude Code skill that turns any machine into a 3D simulator you can take apart",
+      "html_url": "https://github.com/elvarofficial/teardown"
+    },
+    {
+      "full_name": "govijr/terminal-mac",
+      "name": "terminal-mac",
+      "language": "Swift",
+      "stars": 2020,
+      "description": "Entire MacOS running in your terminal.",
+      "html_url": "https://github.com/govijr/terminal-mac"
+    },
+    {
+      "full_name": "mromidev/claude-animated-shorts",
+      "name": "claude-animated-shorts",
+      "language": "TypeScript",
+      "stars": 1896,
+      "description": "Free Claude skill: viral animated story shorts (2D characters in a 3D world) with three.js + Remotion",
+      "html_url": "https://github.com/mromidev/claude-animated-shorts"
     }
   ],
-  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-05.png"
+  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-06.png"
 }
