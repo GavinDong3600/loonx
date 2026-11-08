@@ -1,39 +1,15 @@
 {
   "version": 2,
-  "date": "2026-11-07",
-  "since": "2026-10-31",
-  "generated_at": "2026-11-07T16:45:30+08:00",
+  "date": "2026-11-08",
+  "since": "2026-11-01",
+  "generated_at": "2026-11-08T16:57:49+08:00",
   "sort": "total_stars_of_repositories_created_last_7_days",
   "items": [
-    {
-      "full_name": "deepseek-ai/dsh-superagent-prototype",
-      "name": "dsh-superagent-prototype",
-      "language": "TypeScript",
-      "stars": 20488,
-      "description": "Towards a More Autonomous Agent System",
-      "html_url": "https://github.com/deepseek-ai/dsh-superagent-prototype"
-    },
-    {
-      "full_name": "storytold/craft-anything",
-      "name": "craft-anything",
-      "language": "Rust",
-      "stars": 18979,
-      "description": "Craft Anything: understand how any software works, and craft your own.",
-      "html_url": "https://github.com/storytold/craft-anything"
-    },
-    {
-      "full_name": "zortos293/Lichii",
-      "name": "Lichii",
-      "language": "C++",
-      "stars": 4330,
-      "description": "VERY experimental Nintendo Switch 2 emulator",
-      "html_url": "https://github.com/zortos293/Lichii"
-    },
     {
       "full_name": "KKKKhazix/agent-autoloop",
       "name": "agent-autoloop",
       "language": "TypeScript",
-      "stars": 3807,
+      "stars": 4022,
       "description": "让你的命令行 Agent 在后台自己接活、自己跟进到底",
       "html_url": "https://github.com/KKKKhazix/agent-autoloop"
     },
@@ -41,23 +17,23 @@
       "full_name": "worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
       "name": "Google_AI_Pro_2Year_ZeroCost_Auto",
       "language": "Python",
-      "stars": 2957,
+      "stars": 3150,
       "description": "Google_AI_Pro_2Year_ZeroCost_Auto",
       "html_url": "https://github.com/worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto"
     },
     {
-      "full_name": "Verlintas/NOIR",
-      "name": "NOIR",
-      "language": "Kotlin",
-      "stars": 2820,
-      "description": "手机隐私审计：用 adb 扫出 Android 应用的权限、上报端点与数据流向，并给出可回滚的处置",
-      "html_url": "https://github.com/Verlintas/NOIR"
+      "full_name": "Minireel/HGhub",
+      "name": "HGhub",
+      "language": "TypeScript",
+      "stars": 2604,
+      "description": "YellowFruit third-party client",
+      "html_url": "https://github.com/Minireel/HGhub"
     },
     {
       "full_name": "govijr/terminal-mac",
       "name": "terminal-mac",
       "language": "Swift",
-      "stars": 2195,
+      "stars": 2305,
       "description": "Entire MacOS running in your terminal.",
       "html_url": "https://github.com/govijr/terminal-mac"
     },
@@ -65,26 +41,50 @@
       "full_name": "mromidev/claude-animated-shorts",
       "name": "claude-animated-shorts",
       "language": "TypeScript",
-      "stars": 2078,
+      "stars": 2300,
       "description": "Free Claude skill: viral animated story shorts (2D characters in a 3D world) with three.js + Remotion",
       "html_url": "https://github.com/mromidev/claude-animated-shorts"
+    },
+    {
+      "full_name": "NotRexed/Hookshot",
+      "name": "Hookshot",
+      "language": "C++",
+      "stars": 2144,
+      "description": "A Native Recompilation Of The Legend Of Zelda: Ocarina Of Time Nintendo Switch 2 Remake",
+      "html_url": "https://github.com/NotRexed/Hookshot"
     },
     {
       "full_name": "caru-ini/stack-diagram",
       "name": "stack-diagram",
       "language": "TypeScript",
-      "stars": 2001,
+      "stars": 2088,
       "description": "Agent skill: describe your stack in a sentence, get an architecture diagram with official logos",
       "html_url": "https://github.com/caru-ini/stack-diagram"
     },
     {
-      "full_name": "Minireel/HGhub",
-      "name": "HGhub",
-      "language": "TypeScript",
-      "stars": 1883,
-      "description": "YellowFruit third-party client",
-      "html_url": "https://github.com/Minireel/HGhub"
+      "full_name": "JenkinWoo/sheeridVerify",
+      "name": "sheeridVerify",
+      "language": "JavaScript",
+      "stars": 1787,
+      "description": "项目暂无简介",
+      "html_url": "https://github.com/JenkinWoo/sheeridVerify"
+    },
+    {
+      "full_name": "wquguru/cicada",
+      "name": "cicada",
+      "language": "Swift",
+      "stars": 1711,
+      "description": "知了 Cicada · 任何会议和直播的实时字幕、同声传译、AI 会议纪要，Mac、Windows、Linux、Android 免费开源",
+      "html_url": "https://github.com/wquguru/cicada"
+    },
+    {
+      "full_name": "s1dashu/quiet-md",
+      "name": "quiet-md",
+      "language": "Rust",
+      "stars": 1300,
+      "description": "Blazing-fast native notes app for macOS & Windows. Rust + GPUI, local-first, compatible with Feishu/Lark DocxXML.",
+      "html_url": "https://github.com/s1dashu/quiet-md"
     }
   ],
-  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-07.png"
+  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-08.png"
 }
