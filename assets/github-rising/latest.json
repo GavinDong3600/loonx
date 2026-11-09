@@ -1,90 +1,90 @@
 {
   "version": 2,
-  "date": "2026-11-08",
-  "since": "2026-11-01",
-  "generated_at": "2026-11-08T16:57:49+08:00",
+  "date": "2026-11-09",
+  "since": "2026-11-02",
+  "generated_at": "2026-11-09T17:45:38+08:00",
   "sort": "total_stars_of_repositories_created_last_7_days",
   "items": [
-    {
-      "full_name": "KKKKhazix/agent-autoloop",
-      "name": "agent-autoloop",
-      "language": "TypeScript",
-      "stars": 4022,
-      "description": "让你的命令行 Agent 在后台自己接活、自己跟进到底",
-      "html_url": "https://github.com/KKKKhazix/agent-autoloop"
-    },
-    {
-      "full_name": "worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
-      "name": "Google_AI_Pro_2Year_ZeroCost_Auto",
-      "language": "Python",
-      "stars": 3150,
-      "description": "Google_AI_Pro_2Year_ZeroCost_Auto",
-      "html_url": "https://github.com/worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto"
-    },
     {
       "full_name": "Minireel/HGhub",
       "name": "HGhub",
       "language": "TypeScript",
-      "stars": 2604,
+      "stars": 4520,
       "description": "YellowFruit third-party client",
       "html_url": "https://github.com/Minireel/HGhub"
     },
     {
-      "full_name": "govijr/terminal-mac",
-      "name": "terminal-mac",
-      "language": "Swift",
-      "stars": 2305,
-      "description": "Entire MacOS running in your terminal.",
-      "html_url": "https://github.com/govijr/terminal-mac"
-    },
-    {
-      "full_name": "mromidev/claude-animated-shorts",
-      "name": "claude-animated-shorts",
+      "full_name": "KKKKhazix/agent-autoloop",
+      "name": "agent-autoloop",
       "language": "TypeScript",
-      "stars": 2300,
-      "description": "Free Claude skill: viral animated story shorts (2D characters in a 3D world) with three.js + Remotion",
-      "html_url": "https://github.com/mromidev/claude-animated-shorts"
+      "stars": 4213,
+      "description": "让你的命令行 Agent 在后台自己接活、自己跟进到底",
+      "html_url": "https://github.com/KKKKhazix/agent-autoloop"
     },
     {
       "full_name": "NotRexed/Hookshot",
       "name": "Hookshot",
       "language": "C++",
-      "stars": 2144,
+      "stars": 3580,
       "description": "A Native Recompilation Of The Legend Of Zelda: Ocarina Of Time Nintendo Switch 2 Remake",
       "html_url": "https://github.com/NotRexed/Hookshot"
     },
     {
-      "full_name": "caru-ini/stack-diagram",
-      "name": "stack-diagram",
-      "language": "TypeScript",
-      "stars": 2088,
-      "description": "Agent skill: describe your stack in a sentence, get an architecture diagram with official logos",
-      "html_url": "https://github.com/caru-ini/stack-diagram"
+      "full_name": "worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
+      "name": "Google_AI_Pro_2Year_ZeroCost_Auto",
+      "language": "Python",
+      "stars": 3317,
+      "description": "Google_AI_Pro_2Year_ZeroCost_Auto",
+      "html_url": "https://github.com/worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto"
+    },
+    {
+      "full_name": "govijr/terminal-mac",
+      "name": "terminal-mac",
+      "language": "Swift",
+      "stars": 2448,
+      "description": "Entire MacOS running in your terminal.",
+      "html_url": "https://github.com/govijr/terminal-mac"
     },
     {
       "full_name": "JenkinWoo/sheeridVerify",
       "name": "sheeridVerify",
       "language": "JavaScript",
-      "stars": 1787,
+      "stars": 1897,
       "description": "项目暂无简介",
       "html_url": "https://github.com/JenkinWoo/sheeridVerify"
     },
     {
-      "full_name": "wquguru/cicada",
-      "name": "cicada",
-      "language": "Swift",
-      "stars": 1711,
-      "description": "知了 Cicada · 任何会议和直播的实时字幕、同声传译、AI 会议纪要，Mac、Windows、Linux、Android 免费开源",
-      "html_url": "https://github.com/wquguru/cicada"
+      "full_name": "sarpstar/cinecode",
+      "name": "cinecode",
+      "language": "Python",
+      "stars": 1756,
+      "description": "Films made with code. Short films, long YouTube videos, ads, explainers and music videos: an AI coding agent writes the script, builds every frame in code, designs the sound and hands you an MP4.",
+      "html_url": "https://github.com/sarpstar/cinecode"
     },
     {
-      "full_name": "s1dashu/quiet-md",
-      "name": "quiet-md",
-      "language": "Rust",
-      "stars": 1300,
-      "description": "Blazing-fast native notes app for macOS & Windows. Rust + GPUI, local-first, compatible with Feishu/Lark DocxXML.",
-      "html_url": "https://github.com/s1dashu/quiet-md"
+      "full_name": "tangerineturtle1/NX2navi",
+      "name": "NX2navi",
+      "language": "C",
+      "stars": 1697,
+      "description": "项目暂无简介",
+      "html_url": "https://github.com/tangerineturtle1/NX2navi"
+    },
+    {
+      "full_name": "Sandflow-ai/sand3d",
+      "name": "sand3d",
+      "language": "HTML",
+      "stars": 1517,
+      "description": "3D modeling in Python, built for LLMs.",
+      "html_url": "https://github.com/Sandflow-ai/sand3d"
+    },
+    {
+      "full_name": "livliv-dev/player",
+      "name": "player",
+      "language": "TypeScript",
+      "stars": 1367,
+      "description": "A lightweight 2.5D character player for the web, with lip sync and webcam face tracking.",
+      "html_url": "https://github.com/livliv-dev/player"
     }
   ],
-  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-08.png"
+  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-09.png"
 }
