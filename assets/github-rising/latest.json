@@ -1,71 +1,39 @@
 {
   "version": 2,
-  "date": "2026-11-10",
-  "since": "2026-11-03",
-  "generated_at": "2026-11-10T17:46:00+08:00",
+  "date": "2026-11-11",
+  "since": "2026-11-04",
+  "generated_at": "2026-11-11T17:21:40+08:00",
   "sort": "total_stars_of_repositories_created_last_7_days",
   "items": [
-    {
-      "full_name": "Minireel/HGhub",
-      "name": "HGhub",
-      "language": "TypeScript",
-      "stars": 7406,
-      "description": "YellowFruit third-party client",
-      "html_url": "https://github.com/Minireel/HGhub"
-    },
     {
       "full_name": "NotRexed/Hookshot",
       "name": "Hookshot",
       "language": "C++",
-      "stars": 5689,
+      "stars": 6967,
       "description": "A Native Recompilation Of The Legend Of Zelda: Ocarina Of Time Nintendo Switch 2 Remake",
       "html_url": "https://github.com/NotRexed/Hookshot"
-    },
-    {
-      "full_name": "KKKKhazix/agent-autoloop",
-      "name": "agent-autoloop",
-      "language": "TypeScript",
-      "stars": 4375,
-      "description": "让你的命令行 Agent 在后台自己接活、自己跟进到底",
-      "html_url": "https://github.com/KKKKhazix/agent-autoloop"
     },
     {
       "full_name": "huamidev/GestaltX",
       "name": "GestaltX",
       "language": "Swift",
-      "stars": 3602,
+      "stars": 5620,
       "description": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups, and support for 7 languages.",
       "html_url": "https://github.com/huamidev/GestaltX"
-    },
-    {
-      "full_name": "janestreet/agent_skills",
-      "name": "agent_skills",
-      "language": "其他",
-      "stars": 2842,
-      "description": "Agent skills",
-      "html_url": "https://github.com/janestreet/agent_skills"
     },
     {
       "full_name": "tangerineturtle1/NX2navi",
       "name": "NX2navi",
       "language": "C",
-      "stars": 2606,
+      "stars": 3018,
       "description": "项目暂无简介",
       "html_url": "https://github.com/tangerineturtle1/NX2navi"
-    },
-    {
-      "full_name": "govijr/terminal-mac",
-      "name": "terminal-mac",
-      "language": "Swift",
-      "stars": 2532,
-      "description": "Entire MacOS running in your terminal.",
-      "html_url": "https://github.com/govijr/terminal-mac"
     },
     {
       "full_name": "jhaizhou-ops/S2Arm",
       "name": "S2Arm",
       "language": "C#",
-      "stars": 2205,
+      "stars": 2514,
       "description": "Run your own Switch games natively on iPhone, iPad and Mac: game code rewritten to ARM64, graphics direct to Metal, one app for the whole library. Bring your own games and keys. 把你自己的 Switch 游戏原生带到 iPhone / iPad / Mac",
       "html_url": "https://github.com/jhaizhou-ops/S2Arm"
     },
@@ -73,18 +41,50 @@
       "full_name": "JenkinWoo/sheeridVerify",
       "name": "sheeridVerify",
       "language": "JavaScript",
-      "stars": 1988,
+      "stars": 2017,
       "description": "项目暂无简介",
       "html_url": "https://github.com/JenkinWoo/sheeridVerify"
     },
     {
-      "full_name": "sarpstar/cinecode",
-      "name": "cinecode",
+      "full_name": "IainKay/ram-altman",
+      "name": "ram-altman",
+      "language": "Shell",
+      "stars": 1854,
+      "description": "Monitors your RAM and reports any \"quite terrible\" unused capacity directly to the CEO of OpenAI.",
+      "html_url": "https://github.com/IainKay/ram-altman"
+    },
+    {
+      "full_name": "jamesondh/chimera-vocal-synth",
+      "name": "chimera-vocal-synth",
+      "language": "Rust",
+      "stars": 1806,
+      "description": "the ultimate vocal synthesizer - sing, speak, beatbox, and more",
+      "html_url": "https://github.com/jamesondh/chimera-vocal-synth"
+    },
+    {
+      "full_name": "DIYgod/pinky",
+      "name": "pinky",
+      "language": "Go",
+      "stars": 1787,
+      "description": "Let AI agents use your phone, with you in the loop.",
+      "html_url": "https://github.com/DIYgod/pinky"
+    },
+    {
+      "full_name": "mmdoctor/google-pro-helper",
+      "name": "google-pro-helper",
       "language": "Python",
-      "stars": 1978,
-      "description": "Films made with code. Short films, long YouTube videos, ads, explainers and music videos: an AI coding agent writes the script, builds every frame in code, designs the sound and hands you an MP4.",
-      "html_url": "https://github.com/sarpstar/cinecode"
+      "stars": 1688,
+      "description": "项目暂无简介",
+      "html_url": "https://github.com/mmdoctor/google-pro-helper"
+    },
+    {
+      "full_name": "livliv-dev/player",
+      "name": "player",
+      "language": "TypeScript",
+      "stars": 1480,
+      "description": "A lightweight 2.5D character player for the web, with lip sync and webcam face tracking.",
+      "html_url": "https://github.com/livliv-dev/player"
     }
   ],
-  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-10.png"
+  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-11.png"
 }
