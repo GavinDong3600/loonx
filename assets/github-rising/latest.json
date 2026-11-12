@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "date": "2026-11-11",
-  "since": "2026-11-04",
-  "generated_at": "2026-11-11T17:21:40+08:00",
+  "date": "2026-11-12",
+  "since": "2026-11-05",
+  "generated_at": "2026-11-12T17:48:29+08:00",
   "sort": "total_stars_of_repositories_created_last_7_days",
   "items": [
     {
       "full_name": "NotRexed/Hookshot",
       "name": "Hookshot",
       "language": "C++",
-      "stars": 6967,
+      "stars": 8182,
       "description": "A Native Recompilation Of The Legend Of Zelda: Ocarina Of Time Nintendo Switch 2 Remake",
       "html_url": "https://github.com/NotRexed/Hookshot"
     },
@@ -17,7 +17,7 @@
       "full_name": "huamidev/GestaltX",
       "name": "GestaltX",
       "language": "Swift",
-      "stars": 5620,
+      "stars": 6688,
       "description": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups, and support for 7 languages.",
       "html_url": "https://github.com/huamidev/GestaltX"
     },
@@ -25,7 +25,7 @@
       "full_name": "tangerineturtle1/NX2navi",
       "name": "NX2navi",
       "language": "C",
-      "stars": 3018,
+      "stars": 3370,
       "description": "项目暂无简介",
       "html_url": "https://github.com/tangerineturtle1/NX2navi"
     },
@@ -33,7 +33,7 @@
       "full_name": "jhaizhou-ops/S2Arm",
       "name": "S2Arm",
       "language": "C#",
-      "stars": 2514,
+      "stars": 2693,
       "description": "Run your own Switch games natively on iPhone, iPad and Mac: game code rewritten to ARM64, graphics direct to Metal, one app for the whole library. Bring your own games and keys. 把你自己的 Switch 游戏原生带到 iPhone / iPad / Mac",
       "html_url": "https://github.com/jhaizhou-ops/S2Arm"
     },
@@ -41,31 +41,31 @@
       "full_name": "JenkinWoo/sheeridVerify",
       "name": "sheeridVerify",
       "language": "JavaScript",
-      "stars": 2017,
+      "stars": 2053,
       "description": "项目暂无简介",
       "html_url": "https://github.com/JenkinWoo/sheeridVerify"
-    },
-    {
-      "full_name": "IainKay/ram-altman",
-      "name": "ram-altman",
-      "language": "Shell",
-      "stars": 1854,
-      "description": "Monitors your RAM and reports any \"quite terrible\" unused capacity directly to the CEO of OpenAI.",
-      "html_url": "https://github.com/IainKay/ram-altman"
     },
     {
       "full_name": "jamesondh/chimera-vocal-synth",
       "name": "chimera-vocal-synth",
       "language": "Rust",
-      "stars": 1806,
+      "stars": 2049,
       "description": "the ultimate vocal synthesizer - sing, speak, beatbox, and more",
       "html_url": "https://github.com/jamesondh/chimera-vocal-synth"
+    },
+    {
+      "full_name": "IainKay/ram-altman",
+      "name": "ram-altman",
+      "language": "Shell",
+      "stars": 1970,
+      "description": "Monitors your RAM and reports any \"quite terrible\" unused capacity directly to the CEO of OpenAI.",
+      "html_url": "https://github.com/IainKay/ram-altman"
     },
     {
       "full_name": "DIYgod/pinky",
       "name": "pinky",
       "language": "Go",
-      "stars": 1787,
+      "stars": 1933,
       "description": "Let AI agents use your phone, with you in the loop.",
       "html_url": "https://github.com/DIYgod/pinky"
     },
@@ -73,18 +73,18 @@
       "full_name": "mmdoctor/google-pro-helper",
       "name": "google-pro-helper",
       "language": "Python",
-      "stars": 1688,
+      "stars": 1763,
       "description": "项目暂无简介",
       "html_url": "https://github.com/mmdoctor/google-pro-helper"
     },
     {
-      "full_name": "livliv-dev/player",
-      "name": "player",
-      "language": "TypeScript",
-      "stars": 1480,
-      "description": "A lightweight 2.5D character player for the web, with lip sync and webcam face tracking.",
-      "html_url": "https://github.com/livliv-dev/player"
+      "full_name": "Kianuni/Erosion-CN",
+      "name": "Erosion-CN",
+      "language": "Swift",
+      "stars": 1654,
+      "description": "iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱（简体中文防白苹果安全加固版）",
+      "html_url": "https://github.com/Kianuni/Erosion-CN"
     }
   ],
-  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-11.png"
+  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-12.png"
 }
