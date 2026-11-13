@@ -1,31 +1,23 @@
 {
   "version": 2,
-  "date": "2026-11-12",
-  "since": "2026-11-05",
-  "generated_at": "2026-11-12T17:48:29+08:00",
+  "date": "2026-11-13",
+  "since": "2026-11-06",
+  "generated_at": "2026-11-13T17:29:17+08:00",
   "sort": "total_stars_of_repositories_created_last_7_days",
   "items": [
-    {
-      "full_name": "NotRexed/Hookshot",
-      "name": "Hookshot",
-      "language": "C++",
-      "stars": 8182,
-      "description": "A Native Recompilation Of The Legend Of Zelda: Ocarina Of Time Nintendo Switch 2 Remake",
-      "html_url": "https://github.com/NotRexed/Hookshot"
-    },
     {
       "full_name": "huamidev/GestaltX",
       "name": "GestaltX",
       "language": "Swift",
-      "stars": 6688,
-      "description": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups, and support for 7 languages.",
+      "stars": 7109,
+      "description": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups.",
       "html_url": "https://github.com/huamidev/GestaltX"
     },
     {
       "full_name": "tangerineturtle1/NX2navi",
       "name": "NX2navi",
       "language": "C",
-      "stars": 3370,
+      "stars": 3667,
       "description": "项目暂无简介",
       "html_url": "https://github.com/tangerineturtle1/NX2navi"
     },
@@ -33,7 +25,7 @@
       "full_name": "jhaizhou-ops/S2Arm",
       "name": "S2Arm",
       "language": "C#",
-      "stars": 2693,
+      "stars": 2818,
       "description": "Run your own Switch games natively on iPhone, iPad and Mac: game code rewritten to ARM64, graphics direct to Metal, one app for the whole library. Bring your own games and keys. 把你自己的 Switch 游戏原生带到 iPhone / iPad / Mac",
       "html_url": "https://github.com/jhaizhou-ops/S2Arm"
     },
@@ -41,50 +33,58 @@
       "full_name": "JenkinWoo/sheeridVerify",
       "name": "sheeridVerify",
       "language": "JavaScript",
-      "stars": 2053,
+      "stars": 2174,
       "description": "项目暂无简介",
       "html_url": "https://github.com/JenkinWoo/sheeridVerify"
-    },
-    {
-      "full_name": "jamesondh/chimera-vocal-synth",
-      "name": "chimera-vocal-synth",
-      "language": "Rust",
-      "stars": 2049,
-      "description": "the ultimate vocal synthesizer - sing, speak, beatbox, and more",
-      "html_url": "https://github.com/jamesondh/chimera-vocal-synth"
-    },
-    {
-      "full_name": "IainKay/ram-altman",
-      "name": "ram-altman",
-      "language": "Shell",
-      "stars": 1970,
-      "description": "Monitors your RAM and reports any \"quite terrible\" unused capacity directly to the CEO of OpenAI.",
-      "html_url": "https://github.com/IainKay/ram-altman"
     },
     {
       "full_name": "DIYgod/pinky",
       "name": "pinky",
       "language": "Go",
-      "stars": 1933,
+      "stars": 2050,
       "description": "Let AI agents use your phone, with you in the loop.",
       "html_url": "https://github.com/DIYgod/pinky"
-    },
-    {
-      "full_name": "mmdoctor/google-pro-helper",
-      "name": "google-pro-helper",
-      "language": "Python",
-      "stars": 1763,
-      "description": "项目暂无简介",
-      "html_url": "https://github.com/mmdoctor/google-pro-helper"
     },
     {
       "full_name": "Kianuni/Erosion-CN",
       "name": "Erosion-CN",
       "language": "Swift",
-      "stars": 1654,
+      "stars": 1797,
       "description": "iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱（简体中文防白苹果安全加固版）",
       "html_url": "https://github.com/Kianuni/Erosion-CN"
+    },
+    {
+      "full_name": "HybridRobotics/supermimic",
+      "name": "supermimic",
+      "language": "Python",
+      "stars": 1386,
+      "description": "Humanoid whole-body motion tracking with one differentiable world model.",
+      "html_url": "https://github.com/HybridRobotics/supermimic"
+    },
+    {
+      "full_name": "agentes-chat/agentes-chat",
+      "name": "agentes-chat",
+      "language": "TypeScript",
+      "stars": 1253,
+      "description": "Open-source, self-hosted Slack alternative where your team and AI agents work together in channels and DMs. Agents run on Claude, ChatGPT/Codex, Gemini or Grok, with MCP tools, their own computer and browser, routines, memory and approvals. Web, desk",
+      "html_url": "https://github.com/agentes-chat/agentes-chat"
+    },
+    {
+      "full_name": "mahmoudtawfik1998/secure-pdf-document-processor",
+      "name": "secure-pdf-document-processor",
+      "language": "HTML",
+      "stars": 1212,
+      "description": "Adobe Acrobat Pro 2026: Secure Standalone PDF Document Processor for Desktop",
+      "html_url": "https://github.com/mahmoudtawfik1998/secure-pdf-document-processor"
+    },
+    {
+      "full_name": "abdulmannanmalik13-wq/adobe-substance-3d-studio",
+      "name": "adobe-substance-3d-studio",
+      "language": "HTML",
+      "stars": 1210,
+      "description": "Adobe Substance 3D Creative Studio 2026 - Secure Asset Pipeline Desktop Installer",
+      "html_url": "https://github.com/abdulmannanmalik13-wq/adobe-substance-3d-studio"
     }
   ],
-  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-12.png"
+  "poster_url": "https://raw.githubusercontent.com/GavinDong3600/loonx/main/assets/github-rising/2026-11-13.png"
 }
